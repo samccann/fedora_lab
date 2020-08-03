@@ -1,0 +1,15 @@
+---
+
+  - name: Gathering facts for network devices playbook
+    connection: ansible.netcommon.network_cli
+    gather_facts: true
+    gather_subset: min 
+    module_defaults:
+      vyos.vyos.vyos_facts:
+        gather_network_resources: interfaces
+    hosts: all
+    tasks:
+
+      - name: Display facts
+        debug:
+          var=ansible_facts

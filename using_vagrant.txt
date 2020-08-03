@@ -1,0 +1,3 @@
+  To start: vagrant up
+  To log in - ssh vagrant@ip  (username is vagrant, password is vagrant)
+  to end: vagrant destroy
